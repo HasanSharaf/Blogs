@@ -27,3 +27,4 @@ Route::post('/auth/login', [AuthController::class , 'loginUser']);
 
 //User Api's
 Route::put('/updateUser/{id}', [UserController::class , 'update']);
+Route::delete('/deleteUser/{id}', [UserController::class , 'destroy']);
