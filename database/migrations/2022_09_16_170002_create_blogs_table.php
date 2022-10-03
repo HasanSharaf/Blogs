@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('category_id')->references('id')->on('categories');
-            $table->foreignId('tag_id')->references('id')->on('tags');
+            $table->bigInteger('user_id')->references('id')->on('users')->unsigned();
+            $table->bigInteger('category_id')->references('id')->on('categories')->unsigned();
+            $table->bigInteger('tag_id')->references('id')->on('tags')->unsigned();
             $table->string('image');
             $table->integer('rate');
             $table->timestamps();
